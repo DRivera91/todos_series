@@ -1,7 +1,10 @@
 package com.example.daniel.todos_series.ViewHolder;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,11 +18,12 @@ public class SerieViewHolder extends RecyclerView.ViewHolder implements View.OnC
 
     private ItemClickListener itemClickListener;
 
+
+
     public SerieViewHolder(View itemView) {
         super(itemView);
         serie_name= itemView.findViewById(R.id.menu_name);
         serie_image= itemView.findViewById(R.id.menu_image);
-
         itemView.setOnClickListener(this);
     }
 
@@ -31,4 +35,5 @@ public class SerieViewHolder extends RecyclerView.ViewHolder implements View.OnC
     public void onClick(View v) {
         itemClickListener.onClick(v, getAdapterPosition(),false);
     }
+
 }
